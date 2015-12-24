@@ -1,0 +1,23 @@
+# Windows:
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Python:
+*.py[cod]
+*.so
+*.egg
+*.egg-info
+build
+
+# node
+logs
+*.log
+pids
+*.pid
+*.seed
+.grunt
+build/Release
+node_modules
+
+# My configurations:
