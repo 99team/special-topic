@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>觅博客</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<div id="container" class="container">
+    <div class="avatar avatar-boy">
+        <div class="circle">
+            <a href="#">
+                <div class="spinner"></div>
+                <div class="img"><img src="img/milly.jpg" alt="milly"></div>
+                <div class="info">
+                    <div class="info-back">
+                        <h3>Milly</h3>
+                        <p>前端攻城狮</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="avatar avatar-girl">
+        <div class="circle circle-girl">
+            <a href="#">
+                <div class="spinner"></div>
+                <div class="img"><img src="img/elvin.jpg" alt="elvin"></div>
+                <div class="info">
+                    <div class="info-back">
+                        <h3>Elvin</h3>
+                        <p>原画射鸡狮</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+<script src="js/jquery.js"></script>
+<script src="js/jquery.particleground.min.js"></script>
+<script>
+$(function() {
+    $('#container').particleground({
+        dotColor: '#5cbdaa',
+        lineColor: '#5cbdaa',
+        density: '25e3',
+        parallaxMultiplier: 6,
+        minSpeedX: 0.1,
+        maxSpeedX: 0.3,
+        minSpeedY: 0.1,
+        maxSpeedY: 0.3,
+        directionX: 'center',
+        directionY: 'center'
+    });
+});
+</script>
+</body>
+</html>
