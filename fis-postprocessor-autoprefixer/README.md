@@ -1,23 +1,34 @@
-# fis-optimizer-html-minifier
-Compress htmlfile include inline script and inline style for fis
+# fis-postprocessor-autoprefixer
+CSS3 Autoprefix
 
 ## Usage
 
 ```
-git clone https://github.com/millylee/fis-optimizer-html-minifier.git
-cd fis-optimizer-html-minifier
+git clone https://github.com/millylee/fis-postprocessor-autoprefixer.git
+cd fis-postprocessor-autoprefixer
 npm i
 ```
 ## Fis2
 
 ```
-fis.config.set('modules.optimizer.html', 'html-minifier');
+fis.config.set('modules.postprocessor.css', 'autoprefixer');
+fis.config.set('settings.postprocessor.autoprefixer', {
+    "browsers": ['last 2 versions'],
+    "flexboxfixer": true,
+    "gradientfixer": true
+});
 ```
 
 ## Fis3
 
 ```
-fis.match('*.html', {
-    optimizer: fis.plugin('html-minifier')
+fis.match('*.css',{
+    postprocessor : fis.plugin("autoprefixer",{
+        "browsers": ['last 2 versions'],
+        "flexboxfixer": true,
+        "gradientfixer": true
+    })
 })
 ```
+
+具体浏览器参数请查看[Browserslist](https://github.com/ai/browserslist#queries)
