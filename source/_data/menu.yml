@@ -1,6 +1,3 @@
-index: /
-docs: /docs/
-api: /api/
-news: /news/
-plugins: /plugins/
-themes: /themes/
+index: /index.html
+css: /css.html
+js: /js.html

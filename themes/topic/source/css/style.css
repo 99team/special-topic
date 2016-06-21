@@ -6,26 +6,27 @@
  */
 h2, h3, h4, h5, h6, .h2, .h3, .h4, .h5, .h6{ font-weight: 600;}
 
+ol,li {list-style: none;}
 
 body{ font-family: "MicroSoft YaHei";}
 
-
+.banner-full {background: url(../img/banner.jpg) no-repeat center center;}
 .top-tab-nav{ padding-bottom: 30px;}
 .top-tab-nav .nav-justified{ *margin: 0 auto;}
 
 .sidebar-box .affix{ top: 20px;}
-.sidebar .nav > li > a{ padding: 4px 20px; display: block; color: #666; font-weight: 500;}
-.sidebar .nav > li > a:hover, 
-.sidebar .nav > li > a:focus { padding-left: 19px; background-color: transparent; border-left: 1px solid #563d7c; color: #563d7c; }
-.sidebar .nav > .active > a,
-.sidebar .nav > .active:hover > a,
-.sidebar .nav > .active:focus > a{ padding-left: 18px; border-left: 2px solid #563d7c; background-color: transparent; color: #563d7c; font-weight: 700; }
-.sidebar .nav .nav > li > a { padding: 1px 0 1px 30px; font-size: 12px; font-weight: 400;}
-.sidebar .nav .nav > li > a:hover, 
-.sidebar .nav .nav > li > a:focus { padding-left: 29px; }
-.sidebar .nav .nav > .active > a, 
-.sidebar .nav .nav > .active:hover > a, 
-.sidebar .nav .nav > .active:focus > a { padding-left: 28px; font-weight: 500; }
+.sidebar ol > li > a{ padding: 4px 20px; display: block; color: #666; font-weight: 500;}
+.sidebar ol > li > a:hover, 
+.sidebar ol > li > a:focus { padding-left: 19px; background-color: transparent; border-left: 1px solid #563d7c; color: #563d7c; }
+.sidebar ol > .active > a,
+.sidebar ol > .active:hover > a,
+.sidebar ol > .active:focus > a{ padding-left: 18px; border-left: 2px solid #563d7c; background-color: transparent; color: #563d7c; font-weight: 700; }
+.sidebar ol ol > li > a { padding: 1px 0 1px 30px; font-size: 12px; font-weight: 400;}
+.sidebar ol ol > li > a:hover, 
+.sidebar ol ol > li > a:focus { padding-left: 29px; }
+.sidebar ol ol > .active > a, 
+.sidebar ol ol > .active:hover > a, 
+.sidebar ol ol > .active:focus > a { padding-left: 28px; font-weight: 500; }
 
 .banner-full{ position: relative; margin-bottom: 40px; padding-top: 88px; min-height: 300px; text-align: center; color: #fff;}
 .banner-full h1{ font-size: 50px;}
@@ -34,3 +35,274 @@ body{ font-family: "MicroSoft YaHei";}
 
 .back-to-top{ display: block; padding: 20px 0 0 20px; color: #666;}
 .back-to-top:hover{ color: #563d7c; text-decoration: none;}
+
+/*文章样式*/
+.docs-section {
+  line-height: 1.6em;
+  color: #444;
+}
+@media print {
+  .docs-section {
+    font-size: 12pt;
+  }
+}
+.docs-section p,
+.docs-section ol,
+.docs-section ul,
+.docs-section dl,
+.docs-section table,
+.docs-section blockquote,
+.docs-section iframe,
+.docs-section .highlight {
+  margin: 1em 0;
+}
+.docs-section h1 {
+  font-size: 2em;
+}
+.docs-section h2 {
+  font-size: 1.5em;
+}
+.docs-section h3 {
+  font-size: 1.3em;
+}
+.docs-section h1,
+.docs-section h2,
+.docs-section h3,
+.docs-section h4,
+.docs-section h5,
+.docs-section h6 {
+  line-height: 1em;
+  font-weight: bold;
+  margin: 1em 0;
+}
+.docs-section a {
+  color: #0e83cd;
+  text-decoration: none;
+}
+.docs-section a:hover {
+  color: #1094e8;
+  text-decoration: underline;
+}
+@media print {
+  .docs-section a {
+    color: #444;
+    text-decoration: underline;
+  }
+  .docs-section a:after {
+    content: " (" attr(href) ")";
+    font-size: 80%;
+  }
+}
+.docs-section strong {
+  font-weight: bold;
+}
+.docs-section em {
+  font-style: italic;
+}
+.docs-section ul,
+.docs-section ol,
+.docs-section dl {
+  margin-left: 20px;
+}
+.docs-section ul ul,
+.docs-section ol ul,
+.docs-section dl ul,
+.docs-section ul ol,
+.docs-section ol ol,
+.docs-section dl ol,
+.docs-section ul dl,
+.docs-section ol dl,
+.docs-section dl dl {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.docs-section ul {
+  list-style: disc;
+}
+.docs-section ol {
+  list-style: decimal;
+}
+.docs-section dl {
+  list-style: square;
+}
+.docs-section li p {
+  margin: 0;
+}
+.docs-section li table,
+.docs-section li blockquote,
+.docs-section li iframe,
+.docs-section li .highlight {
+  margin: 1em 0;
+}
+.docs-section img,
+.docs-section video {
+  max-width: 100%;
+}
+.docs-section img {
+  -webkit-box-shadow: 1px 1px 10px 1px #ddd;
+  box-shadow: 1px 1px 10px 1px #ddd;
+}
+.docs-section blockquote {
+  padding: 0 20px;
+  position: relative;
+  border: 1px solid #e3e3e3;
+  border-left: 5px solid #ddd;
+}
+.docs-section blockquote footer {
+  margin: 1em 0;
+  font-style: italic;
+}
+.docs-section blockquote footer cite:before {
+  content: "—";
+  padding: 0 0.3em;
+}
+.docs-section blockquote footer cite a {
+  color: color-grey;
+}
+.docs-section .note.tip {
+  border-left-color: #fa0;
+}
+.docs-section .note.info {
+  border-left-color: #0af;
+}
+.docs-section .note.warn {
+  border-left-color: #f00;
+}
+.docs-section .note-title {
+  margin: 1em 0;
+  display: block;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+.docs-section table {
+  max-width: 100%;
+  border: 1px solid #e3e3e3;
+}
+.docs-section table thead {
+  background: #e3e3e3;
+}
+.docs-section table th {
+  font-weight: bold;
+}
+.docs-section table th,
+.docs-section table td {
+  padding: 5px 15px;
+}
+.docs-section table tr:nth-child(2n) {
+  background: #e3e3e3;
+}
+
+/*代码高亮*/
+pre,
+code {
+  font-family: "Source Code Pro", Monaco, Menlo, Consolas, monospace;
+  background: #ddd;
+  font-size: 0.95em;
+}
+code {
+  padding: 0 5px;
+}
+pre {
+  padding: 10px 15px;
+  line-height: 22px;
+}
+pre code {
+  border: none;
+  display: block;
+  padding: 0;
+}
+.highlight {
+  background: #2d2d2d;
+  padding: 10px 15px;
+  color: #ccc;
+  overflow: auto;
+  margin: 0;
+}
+.highlight table {
+  margin: 0 !important;
+  border: 0;
+}
+.highlight table th,
+.highlight table td {
+  padding: 0;
+}
+.highlight figcaption {
+  margin: -5px 0 5px;
+  font-size: 0.9em;
+  color: #999;
+}
+.highlight figcaption:before,
+.highlight figcaption:after {
+  content: "";
+  display: table;
+}
+.highlight figcaption:after {
+  clear: both;
+}
+.highlight figcaption a {
+  float: right;
+}
+.highlight pre {
+  padding: 0;
+  border: none;
+  background: none;
+}
+.highlight .line {
+  height: 22px;
+}
+pre .comment,
+pre .title {
+  color: #999;
+}
+pre .variable,
+pre .attribute,
+pre .tag,
+pre .regexp,
+pre .ruby .constant,
+pre .xml .tag .title,
+pre .xml .pi,
+pre .xml .doctype,
+pre .html .doctype,
+pre .css .id,
+pre .css .class,
+pre .css .pseudo {
+  color: #f2777a;
+}
+pre .number,
+pre .preprocessor,
+pre .built_in,
+pre .literal,
+pre .params,
+pre .constant {
+  color: #f99157;
+}
+pre .class,
+pre .ruby .class .title,
+pre .css .rules .attribute {
+  color: #9c9;
+}
+pre .string,
+pre .value,
+pre .inheritance,
+pre .header,
+pre .ruby .symbol,
+pre .xml .cdata {
+  color: #9c9;
+}
+pre .css .hexcolor {
+  color: #6cc;
+}
+pre .function,
+pre .python .decorator,
+pre .python .title,
+pre .ruby .function .title,
+pre .ruby .title .keyword,
+pre .perl .sub,
+pre .javascript .title,
+pre .coffeescript .title {
+  color: #69c;
+}
+pre .keyword,
+pre .javascript .function {
+  color: #c9c;
+}

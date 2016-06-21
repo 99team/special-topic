@@ -1,3 +1,2 @@
-<aside id="sidebar" role="navigation">
-  <div class="inner">{{ doc_sidebar('sidebar') }}</div>
-</aside>
+{{ toc(page.content, {class: 'nav', list_number: false}) }}
+<a href="#top" title="返回顶部" class="back-to-top">返回顶部</a>
