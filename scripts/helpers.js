@@ -64,17 +64,19 @@ hexo.extend.helper.register('doc_sidebar', function(className){
   return result;
 });
 
-hexo.extend.helper.register('header_menu', function(className){
-  var menu = this.site.data.menu;
+hexo.extend.helper.register('top_menu', function(){
+  var menu = this.config.menu;
+  var pathname = '/' + pathFn.basename(this.path);
   var result = '';
   var self = this;
-  var lang = this.page.lang;
-  var isZhcn = lang === 'zh-cn';
+  
 
   _.each(menu, function(path, title){
-    if (!isZhcn && ~localizedPath.indexOf(title)) path = lang + path;
-
-    result += '<a href="' + self.url_for(path) + '" class="' + className + '-link">' + self.__('menu.' + title) + '</a>';
+      if (pathname === path) {
+        result += '<li class="active" role="presentation"><a href="' + self.url_for(path) + '">' + self.__('menu.' + title) + '</a></li>';
+      } else {
+        result += '<li role="presentation"><a href="' + self.url_for(path) + '">' + self.__('menu.' + title) + '</a></li>';
+      }      
   });
 
   return result;
@@ -85,51 +87,6 @@ hexo.extend.helper.register('canonical_url', function(lang){
   if (lang && lang !== 'zh-cn') path = lang + '/' + path;
 
   return this.config.url + '/' + path;
-});
-
-hexo.extend.helper.register('url_for_lang', function(path){
-  var lang = this.page.lang;
-  var url = this.url_for(path);
-
-  if (lang !== 'zh-cn' && url[0] === '/') url = '/' + lang + url;
-
-  return url;
-});
-
-hexo.extend.helper.register('raw_link', function(path){
-  return 'https://github.com/tm99/krpano/edit/master/source/' + path;
-});
-
-hexo.extend.helper.register('page_anchor', function(str){
-  var $ = cheerio.load(str, {decodeEntities: false});
-  var headings = $('h1, h2, h3, h4, h5, h6');
-
-  if (!headings.length) return str;
-
-  headings.each(function(){
-    var id = $(this).attr('id');
-
-    $(this)
-      .addClass('article-heading')
-      .append('<a class="article-anchor" href="#' + id + '" aria-hidden="true"></a>');
-  });
-
-  return $.html();
-});
-
-hexo.extend.helper.register('lunr_index', function(data){
-  var index = lunr(function(){
-    this.field('name', {boost: 10});
-    this.field('tags', {boost: 50});
-    this.field('description');
-    this.ref('id');
-  });
-
-  _.sortBy(data, 'name').forEach(function(item, i){
-    index.add(_.assign({id: i}, item));
-  });
-
-  return JSON.stringify(index.toJSON());
 });
 
 hexo.extend.helper.register('canonical_path_for_nav', function(){

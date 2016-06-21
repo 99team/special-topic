@@ -1,5 +1,4 @@
 title: 99知识平台
-subtitle: "快速、高质的多端产品一站式的解决方案。"
 keywords: "99知识平台,前端"
 description: "99知识平台为你提供快速、高质的多端产品一站式的解决方案。"
 author: Milly Lee
@@ -20,6 +19,12 @@ new_post_name: :year-:month-:day-:title.md
 post_asset_folder: true
 # 每页显示的文章量 (0 = 关闭分页功能)
 per_page: 0
+
+# 菜单
+menu:
+  index: /index.html
+  css: /css.html
+  js: /js.html
 
 # 代码着色
 highlight:

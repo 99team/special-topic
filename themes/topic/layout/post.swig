@@ -1,1 +1,1 @@
-{{ partial('partial/post', {post: page}) }}
+{{ page.content }}

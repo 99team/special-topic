@@ -12,13 +12,11 @@
     </div>
     <!-- /banner -->
     <!-- tab nav -->
-    {% if site.data.menu %}
+    {% if config.menu %}
     <div class="container">
       <div class="row top-tab-nav">
         <ul class="nav nav-pills nav-justified" role="tablist">
-        {% for link in site.data.menu %}
-          <li role="presentation"><a href="{{ link }}">{{ loop.key }}</a></li>
-        {% endfor %}
+        {{ top_menu() }}
         </ul>
       </div>
     </div>
@@ -30,7 +28,7 @@
           <div class="docs-section">{{ body }}</div>
         </div>
         <div class="col-md-3 hidden-print hidden-xs hidden-sm sidebar-box">
-          <div class="sidebar" data-spy="affix"  data-offset-top="300">
+          <div class="sidebar" data-spy="affix" data-offset-top="300">
             {{ partial('partial/sidebar') }}
           </div>
         </div>
