@@ -12,7 +12,7 @@
     </div>
     <!-- /banner -->
     <!-- tab nav -->
-    {% if config.menu %}
+    {% if theme.menu %}
     <div class="container">
       <div class="row top-tab-nav">
         <ul class="nav nav-pills nav-justified" role="tablist">

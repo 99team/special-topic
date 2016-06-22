@@ -1,0 +1,9 @@
+# 菜单
+menu:
+  index: /index.html
+  css: /css.html
+  js: /js.html
+
+# 统计
+analytics:
+  baidu: cb9af96e6e2fed8bd03189163e3a47b5

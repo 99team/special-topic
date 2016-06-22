@@ -1,0 +1,93 @@
+note-tip = hsl(40, 100%, 50%)
+note-info = hsl(200, 100%, 50%)
+note-warn = hsl(0, 100%, 50%)
+
+.docs-section
+  line-height: line-height
+  color: color-default
+  @media print
+    font-size: 12pt
+  p, ol, ul, dl, table, blockquote, iframe, .highlight
+    margin: 1em 0
+  h1
+    font-size: 2em
+  h2
+    font-size: 1.5em
+  h3
+    font-size: 1.3em
+  h1, h2, h3, h4, h5, h6
+    line-height: 1em
+    font-weight: bold
+    margin: 1em 0
+  a
+    color: color-link
+    text-decoration: none
+    &:hover
+      color: color-link-hover
+      text-decoration: underline
+    @media print
+      color: color-default
+      text-decoration: underline
+      &:after
+        content: " (" attr(href) ")"
+        font-size: 80%
+  strong
+    font-weight: bold
+  em
+    font-style: italic
+  ul, ol, dl
+    margin-left: 20px
+    ul, ol, dl
+      margin-top: 0
+      margin-bottom: 0
+  ul
+    list-style: disc
+  ol
+    list-style: decimal
+  dl
+    list-style: square
+  li
+    p
+      margin: 0
+    table, blockquote, iframe, .highlight
+      margin: 1em 0
+  img, video
+    max-width: 100%
+  blockquote
+    padding: 0 20px
+    position: relative
+    border: 1px solid color-border
+    border-left: 5px solid #ddd
+    footer
+      margin: 1em 0
+      font-style: italic
+      cite
+        &:before
+          content: "—"
+          padding: 0 0.3em
+        a
+          color: color-grey
+  .note
+    &.tip
+      border-left-color: note-tip
+    &.info
+      border-left-color: note-info
+    &.warn
+      border-left-color: note-warn
+  .note-title
+    margin: 1em 0
+    display: block
+    font-size: 1.3em
+    font-weight: bold
+  table
+    max-width: 100%
+    border: 1px solid color-border
+    thead
+      background: color-border
+    th
+      font-weight: bold
+    th, td
+      padding: 5px 15px
+    tr
+      &:nth-child(2n)
+        background: color-border

@@ -1,48 +1,71 @@
+# Hexo Configuration
+## Docs: https://hexo.io/docs/configuration.html
+## Source: https://github.com/hexojs/hexo/
+
+# Site
 title: 99知识平台
-keywords: "99知识平台,前端"
+subtitle: "99知识平台,前端论坛,HTML5,CSS3,SVG,WebGL"
 description: "99知识平台为你提供快速、高质的多端产品一站式的解决方案。"
 author: Milly Lee
 language: zh-cn
 timezone: UTC
+
+# URL
+## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: https://f2e.tming.net.cn
 root: /
-permalink: news/:year/:month/:day/:title/
-# 归档文件夹
-archive_dir: news
-# Include code 文件夹
+permalink: :year/:month/:day/:title/
+permalink_defaults:
+
+# Directory
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
 code_dir: codes
-# 跳过指定文件的渲染，glob
+i18n_dir: :lang
 skip_render: codes/*
-# 新文章的文件名称
-new_post_name: :year-:month-:day-:title.md
-# 启动 Asset 文件夹
-post_asset_folder: true
-# 每页显示的文章量 (0 = 关闭分页功能)
-per_page: 0
 
-# 菜单
-menu:
-  index: /index.html
-  css: /css.html
-  js: /js.html
-
-# 代码着色
+# Writing
+new_post_name: :year-:month-:day-:title.md # File name of new posts
+default_layout: post
+titlecase: false # Transform title into titlecase
+external_link: true # Open external links in new tab
+filename_case: 0
+render_drafts: false
+post_asset_folder: false
+relative_link: false
+future: true
 highlight:
   enable: true
   line_number: false
+  auto_detect: false
+  tab_replace:
 
-# 主题
+# Category & Tag
+default_category: uncategorized
+category_map:
+tag_map:
+
+# Date / Time format
+## Hexo uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format/
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+
+# Pagination
+## Set per_page to 0 to disable pagination
+per_page: 0
+pagination_dir: page
+
+# Extensions
+## Plugins: https://hexo.io/plugins/
+## Themes: https://hexo.io/themes/
 theme: topic
 
-# 部署
+# Deployment
+## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: git
-  repo: git@github.com:millylee/millylee.github.io.git
-
-# 评论
-comment:
-  duoshuo: 99knowledge
-
-# 统计
-analytics:
-  baidu: cb9af96e6e2fed8bd03189163e3a47b5
+  type:
