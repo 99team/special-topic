@@ -4,5 +4,5 @@ menu:
     css: CSS 规范
     js: JS 规范
   ruler:
-    test1: HTML1 规范
-    test2: HTML2 规范
+    bb: HTML1 规范
+    cc: HTML2 规范
