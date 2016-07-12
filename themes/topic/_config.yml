@@ -1,9 +1,11 @@
-# 菜单
 menu:
-  index: /index.html
-  css: /css.html
-  js: /js.html
-
+  guide:
+    html: html.html
+    css: css.html
+    js: js.html
+  ruler:
+    test1: test1.html
+    test2: test2.html
 # 统计
 analytics:
   baidu: cb9af96e6e2fed8bd03189163e3a47b5

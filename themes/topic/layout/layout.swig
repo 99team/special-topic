@@ -12,15 +12,21 @@
     </div>
     <!-- /banner -->
     <!-- tab nav -->
-    {% if theme.menu %}
-    <div class="container">
-      <div class="row top-tab-nav">
-        <ul class="nav nav-pills nav-justified" role="tablist">
-        {{ top_menu() }}
-        </ul>
-      </div>
-    </div>
-    {% endif %}
+    {{ top_menu() }}
+    <!-- {% for link in theme.menu.guide %}
+      <a href="{{ link }}">{{ __(loop.key) }}</a>
+    {% endfor %} -->
+
+<!--     {% for cate in page.categories.toArray() %}
+      {{ cate.name }}
+      
+    {% endfor %} -->
+
+    <!-- {% if site.posts.length > 0 %}
+      {% for postItem in site.posts.toArray() %}
+      <a href="{{ postItem.path }}">{{ postItem.title }}</a>
+      {% endfor %}
+    {% endif %}  -->
     <!-- tab nav -->
     <div class="container">
       <div class="row">

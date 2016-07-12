@@ -1,4 +1,8 @@
 menu:
-  index: HTMl规范
-  css: CSS规范
-  js: JavaScript规范
+  guide:
+    html: HTML 规范
+    css: CSS 规范
+    js: JS 规范
+  ruler:
+    test1: HTML1 规范
+    test2: HTML2 规范
