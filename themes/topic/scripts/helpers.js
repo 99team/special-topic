@@ -6,6 +6,7 @@ var url = require('url');
 var cheerio = require('cheerio');
 var lunr = require('lunr');
 
+// 文章页导航
 hexo.extend.helper.register('top_menu', function(category){
   var menu = this.theme.menu[category];
   var pathname = '/' + pathFn.basename(this.path);
